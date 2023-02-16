@@ -1,5 +1,5 @@
 {
-  "name": "@343max/testflight-dev-deploy",
+  "name": "testflight-dev-deploy",
   "version": "0.0.1",
   "description": "Expo Config Plugin to deploy dev app via TestFlight",
   "main": "app.plugin.js",
