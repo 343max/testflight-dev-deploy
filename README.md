@@ -19,7 +19,7 @@ So all this actually does is replace a `#if RCT_DEV` macro by a `#if 0` at the t
 
 ```js
 {
-  plugins: [["testflight-dev-deploy", { enabled: true }]]
+  plugins: [["@343max/testflight-dev-deploy", { enabled: true }]]
 }
 ```
 
