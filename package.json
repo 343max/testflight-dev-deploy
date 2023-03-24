@@ -1,6 +1,6 @@
 {
   "name": "testflight-dev-deploy",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Expo Config Plugin to deploy dev app via TestFlight",
   "main": "app.plugin.js",
   "homepage": "https://github.com/343max/testflight-dev-deploy",

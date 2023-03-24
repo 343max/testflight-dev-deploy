@@ -1,27 +1,52 @@
-import { ConfigPlugin, withDangerousMod } from '@expo/config-plugins';
-import fs from 'fs/promises';
-import path from 'path';
+import { ConfigPlugin, withDangerousMod } from "@expo/config-plugins"
+import fs from "fs/promises"
+import path from "path"
 
-const withTestflightDevDeploy: ConfigPlugin<{ enabled: boolean }> = (config, { enabled = false }) => {
+const withTestflightDevDeploy: ConfigPlugin<{ enabled: boolean }> = (
+  config,
+  { enabled = false }
+) => {
+  const podfilePatch = [
+    "",
+    "# This was added by testflight-dev-deploy",
+    'key_command_path = File.join(__dir__, "../node_modules/react-native/React/Base/RCTKeyCommands.m")',
+    "file_content = File.read(key_command_path)",
+    'file_content.sub!(/#if RCT_DEV/, "#if 0")',
+    "File.write(key_command_path, file_content)",
+    'puts "Patched RCTKeyCommands.m to disable key commands in dev mode"',
+    "# end testflight-dev-deploy",
+    "",
+  ]
+    .map((s) => `    ${s}`)
+    .join("\n")
+
   withDangerousMod(config, [
-    'ios',
+    "ios",
     async (config) => {
       if (!enabled) {
-        return config;
+        return config
       }
-      const projectRoot = config._internal!['projectRoot'];
-      const keyCommandPath = path.join(projectRoot, 'node_modules/react-native/React/Base/RCTKeyCommands.m');
 
-      const code = await fs.readFile(keyCommandPath, { encoding: 'utf-8' });
-      const patchedCode = code.replace(/^#if RCT_DEV/m, '#if 0');
-      await fs.writeFile(keyCommandPath, patchedCode);
+      const podfilePath = path.join(
+        config.modRequest.platformProjectRoot,
+        "Podfile"
+      )
 
-      console.log('Patched RCTKeyCommands.m');
+      const code = await fs.readFile(podfilePath, { encoding: "utf-8" })
+      const patchedCode = code.replace(
+        /^\s*post_integrate do \|installer\|/m,
+        (match) => {
+          return `${match}\n${podfilePatch}`
+        }
+      )
+      await fs.writeFile(podfilePath, patchedCode)
 
-      return config;
+      console.log("Patched Podfile to patch RCTKeyCommands.m")
+
+      return config
     },
-  ]);
-  return config;
-};
+  ])
+  return config
+}
 
-export default withTestflightDevDeploy;
+export default withTestflightDevDeploy
