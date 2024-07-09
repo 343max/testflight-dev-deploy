@@ -1,6 +1,8 @@
 # testflight-dev-deploy
 
-Expo Config Plugin to deploy dev app via TestFlight
+Deploy your expo dev client app via TestFlight to your dev devices.
+
+https://github.com/343max/testflight-dev-deploy/assets/33906/28b54b31-7fe5-4441-a093-9778f59fa1b1
 
 # TestFlight Enabler for the Dev Client
 
