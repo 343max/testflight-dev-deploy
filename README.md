@@ -6,13 +6,22 @@ Deploy your expo dev client app via TestFlight to your dev devices.
 
 # Enable TestFlight for Expo Dev Client apps
 
-Expo Custom Dev Client can only be deployed to the iOS Simulator or to IPA Packages that are cumbersome to maintain and hard to install or update. It would be much easier to be able to deploy Expo Dev Client Apps through TestFlight: everyone on the team could install them very easily on all their devices and updates would run in the background or can be triggered by the press of a button.
+Out of the box Expo dev client apps can't be distributed through TestFlight. This tool fixes that. This makes it oh so much easier for developers on your team to test your expo app on real devices. And if you use it in combination with [dev-client-mac-tools](https://github.com/343max/dev-client-mac-tools) you can use your TestFlight dev client builds to develop expo apps on macOS without needing Xcode or the Simulator.
 
-Out of the box Expo dev client apps can't be distributed through TestFlight: React Natives developer tools use so called "non-public API" and Apple therefore will automatically reject the app.
+As a result developers on your team will be able to develop and test your expo dev apps on macOS, iOS and iPad OS without ever installing or touching Xcode or the Simulator.
+
+- expo development without Xcode
+- much more lightweight, robust development setup
+- focus on your app, not on the native build process
+- easy on click updates or even automatic updates via TestFlight
+
+# How does it work?
+
+Out of the box Expo dev client apps can't be distributed through TestFlight: React Natives developer tools use so called "non-public API" and Apple therefore will automatically reject a dev client app if you try to deploy it through their infrastructure.
 
 This config plugin removes the usage of non-public API. Luckily for us the only place where it's used is to read some short cut keys that we don't really need on a device.
 
-So all this actually does is replace a `#if RCT_DEV` macro by a `#if 0` at the top of `react-native/React/Base/RCTKeyCommands.m`.
+So a the end of the day all this actually does is replace a `#if RCT_DEV` macro by a `#if 0` at the top of `react-native/React/Base/RCTKeyCommands.m`.
 
 # Usage
 
