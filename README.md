@@ -2,9 +2,9 @@
 
 Deploy your expo dev client app via TestFlight to your dev devices.
 
-https://github.com/343max/testflight-dev-deploy/assets/33906/28b54b31-7fe5-4441-a093-9778f59fa1b1
+<video src="https://raw.githubusercontent.com/343max/testflight-dev-deploy/main/images/demo.mp4" width="100%" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
 
-# TestFlight Enabler for the Dev Client
+# Enable TestFlight for Expo Dev Client apps
 
 Expo Custom Dev Client can only be deployed to the iOS Simulator or to IPA Packages that are cumbersome to maintain and hard to install or update. It would be much easier to be able to deploy Expo Dev Client Apps through TestFlight: everyone on the team could install them very easily on all their devices and updates would run in the background or can be triggered by the press of a button.
 
