@@ -2,7 +2,9 @@
 
 Deploy your expo dev client app via TestFlight to your dev devices.
 
-https://github.com/343max/testflight-dev-deploy/assets/33906/28b54b31-7fe5-4441-a093-9778f59fa1b1
+<video src="https://raw.githubusercontent.com/343max/testflight-dev-deploy/main/images/demo.mp4" width="100%" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+
+<video src="https://private-user-images.githubusercontent.com/33906/346911964-28b54b31-7fe5-4441-a093-9778f59fa1b1.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjA2OTA4MDYsIm5iZiI6MTcyMDY5MDUwNiwicGF0aCI6Ii8zMzkwNi8zNDY5MTE5NjQtMjhiNTRiMzEtN2ZlNS00NDQxLWEwOTMtOTc3OGY1OWZhMWIxLm1wND9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MTElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzExVDA5MzUwNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFhNzQ5MGM4OWRkYjcyYThlMmU0MzAwYWMxNzliMDQ3NzA3MGExOGRmNzI5MTIwNmRhMDFmYjQ4NDBjYTkzYTgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.g0OdcKjLv4hR2_vBP7Vl-mR7zQqGLl-byxt85_sbdao" width="100%" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
 
 # TestFlight Enabler for the Dev Client
 
