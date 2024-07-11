@@ -2,7 +2,7 @@
 
 Deploy your expo dev client app via TestFlight to your dev devices.
 
-<video src="https://raw.githubusercontent.com/343max/testflight-dev-deploy/main/images/demo.mp4" width="100%" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
+<video src="https://github.com/343max/testflight-dev-deploy/assets/33906/28b54b31-7fe5-4441-a093-9778f59fa1b1" width="100%" controls="controls" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"></video>
 
 # Enable TestFlight for Expo Dev Client apps
 
